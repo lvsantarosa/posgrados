@@ -26,6 +26,12 @@ data/
 *.sbn
 *.sbx
 
+# --- Salidas de los talleres ---
+03_SALIDAS/
+04_RESULTADOS/
+excluir/
+*.gpkg
+
 # --- Sistema ---
 .DS_Store
 Thumbs.db

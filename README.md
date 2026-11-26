@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌎💧 Material de Posgrado — Introducción al SIG, Hidrología y Geotecnologías
+# 🌎💧 Material de Posgrado — SIG, Hidrología, Teledetección y Geotecnologías
 
 **Laboratorio de Recursos Hídricos y Geotecnologías (LRHG)**
 Facultad de Ciencias Agronómicas y de los Alimentos · Escuela de Agronomía
@@ -18,9 +18,12 @@ Pontificia Universidad Católica de Valparaíso (PUCV)
 
 ## 📖 Sobre el repositorio
 
-Este repositorio reúne **materiales, scripts, datos de apoyo y orientaciones** utilizados en las asignaturas de posgrado impartidas en el ámbito de la Facultad de Ciencias Agronómicas y de los Alimentos y de la Escuela de Agronomía de la **PUCV**.
+Este repositorio reúne **scripts, notebooks y documentación** de las asignaturas
+de posgrado impartidas en el ámbito de la Facultad de Ciencias Agronómicas y de
+los Alimentos y de la Escuela de Agronomía de la **PUCV**.
 
-Su contenido se articula en torno a los temas centrales de investigación del **Laboratorio de Recursos Hídricos y Geotecnologías**:
+Su contenido se articula en torno a los temas centrales de investigación del
+**Laboratorio de Recursos Hídricos y Geotecnologías**:
 
 | | Línea temática |
 |:--:|:--|
@@ -29,59 +32,63 @@ Su contenido se articula en torno a los temas centrales de investigación del **
 | 🏞️ | **Gestión de cuencas hidrográficas** |
 | 🗺️ | **Análisis espacial aplicado** a la agricultura |
 
-El propósito principal es ofrecer una documentación **organizada, reproducible y transparente** que facilite a estudiantes e investigadores la ejecución de análisis, la replicación de ejercicios y la consulta de contenidos teóricos y prácticos.
+El propósito es ofrecer una documentación **organizada, reproducible y
+transparente** que facilite a estudiantes e investigadores la ejecución de
+análisis, la replicación de ejercicios y la consulta de contenidos teóricos y
+prácticos.
 
 ---
 
 ## 🗂️ Estructura del repositorio
 
+El material está organizado **por asignatura**. Cada una tiene su propio
+`README.md` con los talleres, y un `DATOS/FUENTES.md` con el origen de cada
+insumo.
+
 ```
-POSGRADO/
-├── R/                    # Asignatura: Introducción a los SIG (INTROSIG)
+posgrados/
+├── INTROSIG/                      # Introducción a los SIG · R + QGIS
 │   ├── INTROSIG_TALLER1_R_VECTOR_DATA.R
 │   ├── INTROSIG_TALLER2_R_RASTER_DATA.R
 │   ├── INTROSIG_TALLER3_R_EVALUACION_QGIS.R
 │   ├── INTROSIG_TALLER4_R_COQUIMBO_DERECHOS.R
-│   └── DATOS/
-│       ├── datospublicos.md     # Fuentes oficiales de descarga
-│       ├── 01_FRUTALES.rar
-│       └── Derechos.rar
-└── Python/               # Asignatura: Geohidrología (GEOHIDRO) — Google Earth Engine
-    ├── GEOHIDRO_TALLER3.ipynb
-    ├── GEOHIDRO_TALLER4.ipynb
-    └── GEOHIDRO_TALLER5.ipynb
+│   └── DATOS/FUENTES.md
+├── GEOHIDRO/                      # Geohidrología · Python + GEE
+│   ├── GEOHIDRO_TALLER3.ipynb
+│   ├── GEOHIDRO_TALLER4.ipynb
+│   ├── GEOHIDRO_TALLER5.ipynb
+│   └── DATOS/FUENTES.md
+└── TAEV/                          # Teledetección Aplicada al Estudio de la Vegetación
+    ├── 00_GEE_PYTHON_INICIACION/        iniciación a GEE con Python
+    ├── 01_SAFER_TRES_CRUCES_UY/         SAFER paso a paso (Uruguay)
+    ├── 02_SAFER_CASABLANCA_CL/          SAFER con torre de flujo (Chile)
+    ├── 03_SWIR_ETO_VPD_CASABLANCA/      SWIR, ET₀ y VPD con ERA5-Land
+    └── DATOS/FUENTES.md
 ```
 
 ---
 
-## 📘 Contenido de los talleres
+## 📘 Asignaturas
 
-### 🅡 Introducción a los SIG — scripts en R
+### 🗺️ [INTROSIG — Introducción a los SIG](INTROSIG/)
 
-| Taller | Script | Contenido |
-|:--:|:--|:--|
-| 1 | [`INTROSIG_TALLER1_R_VECTOR_DATA.R`](R/INTROSIG_TALLER1_R_VECTOR_DATA.R) | Datos **vectoriales**: carga de coberturas frutícolas y provincias de Valparaíso, geoprocesos de intersección y estadística descriptiva de superficie cultivada. |
-| 2 | [`INTROSIG_TALLER2_R_RASTER_DATA.R`](R/INTROSIG_TALLER2_R_RASTER_DATA.R) | Integración **vector–ráster** con Landsat 8 (Nivel 2): recorte a la Provincia de Quillota, conversión a reflectancia de superficie, índices **NDVI, NDWI y NDMI** y estadísticas zonales por especie frutal. |
-| 3 | [`INTROSIG_TALLER3_R_EVALUACION_QGIS.R`](R/INTROSIG_TALLER3_R_EVALUACION_QGIS.R) | **Evaluación práctica**: densidad de riego y superficie frutícola provincial, NDVI estacional y estadísticas zonales. |
-| 4 | [`INTROSIG_TALLER4_R_COQUIMBO_DERECHOS.R`](R/INTROSIG_TALLER4_R_COQUIMBO_DERECHOS.R) | **Vulnerabilidad hídrica y estrés vegetativo (Coquimbo)**: dependencia de aguas subterráneas de la matriz frutícola a partir de los derechos de aprovechamiento de la DGA y mosaicos Landsat 8 de sequía estival. |
+Análisis espacial en **R** (`terra`, `tidyterra`) con evaluación en QGIS: datos
+vectoriales, integración vector–ráster con Landsat 8, índices espectrales,
+estadísticas zonales por especie frutal y vulnerabilidad hídrica en Coquimbo a
+partir de los derechos de aprovechamiento de la DGA.
 
-**Paquetes R utilizados:** `terra`, `tidyterra`, `dplyr`, `tidyr`, `ggplot2`, `readxl`, `janitor`
+### 💧 [GEOHIDRO — Geohidrología](GEOHIDRO/)
 
-```r
-install.packages(c("terra", "tidyterra", "dplyr", "tidyr", "ggplot2", "readxl", "janitor"))
-```
+Balance hídrico de cuencas con productos globales en **Google Earth Engine**:
+precipitación CHIRPS, evapotranspiración MODIS, GLDAS y ERA5-Land, con series
+temporales, detección de quiebres y comparación entre cuencas.
 
-### 🅟 Geohidrología — notebooks en Python / Google Earth Engine
+### 🛰️ [TAEV — Teledetección Aplicada al Estudio de la Vegetación](TAEV/)
 
-| Taller | Notebook | Contenido |
-|:--:|:--|:--|
-| 3 | [`GEOHIDRO_TALLER3.ipynb`](Python/GEOHIDRO_TALLER3.ipynb) | Análisis espacial y temporal de **precipitación (CHIRPS)**: extracción de series por subcuenca, detección de quiebres y generación de mapas. |
-| 4 | [`GEOHIDRO_TALLER4.ipynb`](Python/GEOHIDRO_TALLER4.ipynb) | **Balance hídrico** mensual (2003–2026) con CHIRPS (P) y MODIS MOD16A2GF (ET), series temporales y cartografía. |
-| 5 | [`GEOHIDRO_TALLER5.ipynb`](Python/GEOHIDRO_TALLER5.ipynb) | **Análisis comparativo entre cuencas** con panel de control configurable: CHIRPS, MODIS, GLDAS y ERA5-Land, balances anuales y boxplots. |
-
-**Librerías Python utilizadas:** `earthengine-api`, `geemap`, `geopandas`, `pandas`, `numpy`, `matplotlib`, `seaborn`
-
-> 💡 Los notebooks están pensados para ejecutarse en **Google Colab** con Google Drive montado y una cuenta habilitada en Google Earth Engine.
+De la energía registrada por el sensor hasta la **evapotranspiración actual**
+mediante el algoritmo **SAFER**, aplicado a dos casos de estudio reales
+—la cuenca del río Tres Cruces (Uruguay) y un viñedo con torre de flujo en
+Casablanca (Chile)— y extendido al componente atmosférico con ERA5-Land.
 
 ---
 
@@ -89,12 +96,16 @@ install.packages(c("terra", "tidyterra", "dplyr", "tidyr", "ggplot2", "readxl", 
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/lvsantarosa/POSGRADO.git
-   cd POSGRADO
+   git clone https://github.com/lvsantarosa/posgrados.git
+   cd posgrados
    ```
-2. **Descargar los datos** desde sus fuentes oficiales siguiendo [`R/DATOS/datospublicos.md`](R/DATOS/datospublicos.md).
-3. **Ajustar las rutas** al inicio de cada script o notebook (`setwd()`, `vect()`, `ruta_zip`): las rutas incluidas corresponden al equipo del docente y deben adaptarse a su propia estructura de carpetas.
-4. **Ejecutar paso a paso**, siguiendo los bloques numerados y comentados de cada archivo.
+2. **Descargar los datos** desde sus fuentes oficiales, siguiendo el archivo
+   `DATOS/FUENTES.md` de la asignatura correspondiente.
+3. **Ajustar las rutas** al inicio de cada script o notebook (`setwd()`,
+   `vect()`, `ruta_zip`, `PROJECT_ID`): las rutas incluidas corresponden al
+   equipo del docente y deben adaptarse a su propia estructura de carpetas.
+4. **Ejecutar paso a paso**, siguiendo los bloques numerados y comentados de
+   cada archivo.
 
 ### ✅ Requisitos previos
 
@@ -106,15 +117,24 @@ install.packages(c("terra", "tidyterra", "dplyr", "tidyr", "ggplot2", "readxl", 
 
 ## 📂 Datos
 
-Los conjuntos de datos **no se distribuyen completos** en este repositorio: deben descargarse desde sus fuentes oficiales (ODEPA/ICET, BCN, DGA). El detalle de cada fuente, su descripción y la carpeta de destino están documentados en **[`R/DATOS/datospublicos.md`](R/DATOS/datospublicos.md)**.
+Los conjuntos de datos **no se distribuyen en este repositorio**: pertenecen a
+las instituciones y redes de medición que los producen, y cada una establece sus
+propias condiciones de acceso y cita. Esto incluye las series de estaciones
+meteorológicas (INIA GRAS Uruguay, Agromet INIA Chile) y los datos de torre de
+flujo (ChileFlux).
 
-Para datos satelitales preparados para Chile, véase también el repositorio complementario [**gee-global-data-chile**](https://github.com/lvsantarosa/gee-global-data-chile), junto con los demás repositorios listados en [Repositorios complementarios](#-repositorios-complementarios).
+El origen de cada insumo, con su enlace oficial, está documentado en:
+
+- [`INTROSIG/DATOS/FUENTES.md`](INTROSIG/DATOS/FUENTES.md) — ICET/ODEPA, BCN, DGA
+- [`GEOHIDRO/DATOS/FUENTES.md`](GEOHIDRO/DATOS/FUENTES.md) — colecciones GEE y Mapoteca DGA
+- [`TAEV/DATOS/FUENTES.md`](TAEV/DATOS/FUENTES.md) — Landsat, Sentinel-2, ERA5-Land, MapBiomas, INIA y ChileFlux
+
+Para datos satelitales preparados para Chile, véase también el repositorio
+complementario [**gee-global-data-chile**](https://github.com/lvsantarosa/gee-global-data-chile).
 
 ---
 
 ## 🔗 Repositorios complementarios
-
-Otros repositorios del autor con material de apoyo, scripts y tutoriales que amplían los contenidos de estos talleres:
 
 | Repositorio | Lenguaje | Contenido |
 |:--|:--:|:--|
@@ -127,15 +147,34 @@ Otros repositorios del autor con material de apoyo, scripts y tutoriales que amp
 
 ---
 
+## 📑 Publicaciones asociadas
+
+Los casos de estudio de la asignatura TAEV provienen de investigación publicada
+del laboratorio. Los artículos no se distribuyen en este repositorio.
+
+> Santarosa, L. V., de Oliveira Ferreira Silva, C., Hirigoyen, A., & Stager Quaggio, C. (2025).
+> *Water Consumption Assessment of Afforestation and Natural Vegetation Areas with a Remote Sensing Approach*.
+> **Water, 17**(11), 1597. <https://doi.org/10.3390/w17111597>
+
+> Santarosa, L. V., & de Oliveira Ferreira Silva, C. (2026).
+> *Assessment of structural water stress in semi-arid agricultural basins using high-resolution evapotranspiration mapping*.
+> **Ecohydrology & Hydrobiology, 26**, 100843. <https://doi.org/10.1016/j.ecohyd.2026.100843>
+
+---
+
 ## 🤖 Nota sobre el uso de inteligencia artificial
 
-Una parte significativa de los materiales ha sido **perfeccionada mediante herramientas de inteligencia artificial**, con el fin de mejorar la claridad de los comentarios, optimizar la estructura de los documentos y facilitar el estudio y uso de estos recursos. La concepción metodológica, la selección de datos y la validación de los resultados son responsabilidad del autor.
+Una parte significativa de los materiales ha sido **perfeccionada mediante
+herramientas de inteligencia artificial**, con el fin de mejorar la claridad de
+los comentarios, optimizar la estructura de los documentos y facilitar el
+estudio y uso de estos recursos. La concepción metodológica, la selección de
+datos y la validación de los resultados son responsabilidad del autor.
 
 ---
 
 ## 📑 Cómo citar
 
-> Santarosa, L. V. (2026). *Material de apoyo y scripts para cursos de posgrado — Laboratorio de Recursos Hídricos y Geotecnologías*. Pontificia Universidad Católica de Valparaíso. https://github.com/lvsantarosa/POSGRADO
+> Santarosa, L. V. (2026). *Material de apoyo y scripts para cursos de posgrado — Laboratorio de Recursos Hídricos y Geotecnologías*. Pontificia Universidad Católica de Valparaíso. https://github.com/lvsantarosa/posgrados
 
 ---
 

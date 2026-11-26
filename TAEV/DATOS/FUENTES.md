@@ -35,12 +35,17 @@ los dos GeoTIFF que el script en R espera
 **Cómo generar los insumos del Taller 01.** Las cuatro escenas estacionales
 pesan unos 107 MB cada una, de modo que no se distribuyen: se regeneran con
 [`01_SAFER_TRES_CRUCES_UY/GEE/00_exportar_TRC.js`](../01_SAFER_TRES_CRUCES_UY/GEE/00_exportar_TRC.js),
-que las exporta a su propio Google Drive desde las colecciones TOA. La
-composición de bandas de cada GeoTIFF está descrita en
+que las exporta a su propio Google Drive desde las colecciones TOA. El límite
+de la cuenca viene **incluido en el propio script**, de modo que no hace falta
+subir ningún asset ni disponer de datos previos: se pega el archivo, se pulsa
+Run y se ejecutan las cuatro tareas. La composición de bandas de cada GeoTIFF
+está descrita en
 [`01_SAFER_TRES_CRUCES_UY/DICCIONARIO_DE_DATOS.md`](../01_SAFER_TRES_CRUCES_UY/DICCIONARIO_DE_DATOS.md).
 
 Requisitos: cuenta habilitada en [Earth Engine](https://earthengine.google.com/signup/)
-y un proyecto de Google Cloud asociado (`PROJECT_ID` en los notebooks).
+y un proyecto de Google Cloud asociado. En los notebooks, escriba su
+identificador de proyecto en la variable `PROJECT_ID`, que viene con el valor
+de ejemplo `'SU_PROJECT_ID'`.
 
 ---
 
@@ -81,17 +86,22 @@ encabezado de los scripts correspondientes.
 
 ---
 
-## 📦 Paquete de datos del curso
+## 📦 Cómo reunir los datos
 
-Para quienes cursan la asignatura existe un paquete con los datos ya preparados
-y organizados por taller, que **se solicita al docente**. No es de distribución
-abierta: varios de esos conjuntos pertenecen a redes de medición que establecen
-sus propias condiciones de acceso.
+**Las imágenes no dependen de nadie.** Los dos scripts de Earth Engine
+incluidos en el repositorio las generan completas, con el área de estudio ya
+configurada:
 
-Ese paquete tampoco incluye las cuatro escenas Landsat del Taller 01 (427 MB en
-total): se regeneran con el script de exportación indicado más arriba.
+| Script | Genera |
+|:--|:--|
+| [`01_SAFER_TRES_CRUCES_UY/GEE/00_exportar_TRC.js`](../01_SAFER_TRES_CRUCES_UY/GEE/00_exportar_TRC.js) | Las cuatro escenas estacionales Landsat 8/9 de la cuenca del río Tres Cruces (427 MB) |
+| [`02_SAFER_CASABLANCA_CL/GEE/01_descargar_Casablanca_L89_S2.js`](../02_SAFER_CASABLANCA_CL/GEE/01_descargar_Casablanca_L89_S2.js) | Los GeoTIFF Landsat 8/9 y Sentinel-2 de Casablanca |
 
-Quien no curse la asignatura puede reconstruir todos los insumos a partir de
-las fuentes listadas en esta página: las imágenes con los dos scripts de Earth
-Engine incluidos en el repositorio, y las series de estaciones desde los
-portales de INIA, Agromet y ChileFlux.
+**Las series de estaciones se descargan de sus redes**, en los portales de INIA
+GRAS, Agromet y ChileFlux indicados más arriba. No se redistribuyen aquí
+porque cada red establece sus propias condiciones de acceso y cita.
+
+**Las capas auxiliares preparadas para los talleres** —el contorno de la cuenca,
+el recorte de MapBiomas, la serie temporal recalculada y las bases vectoriales
+de Valparaíso— **se solicitan al docente** quienes cursan la asignatura. Pesan
+pocos cientos de kilobytes y pueden rehacerse desde las fuentes de esta página.

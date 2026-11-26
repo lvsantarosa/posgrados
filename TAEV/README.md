@@ -49,14 +49,17 @@ instituciones que los producen y **no se redistribuyen aquí**.
 Cada insumo, con su fuente oficial y su vía de acceso, está documentado en
 **[`DATOS/FUENTES.md`](DATOS/FUENTES.md)**.
 
-Quienes cursan la asignatura pueden **solicitar al docente** el paquete con los
-datos ya preparados y organizados por taller. Las imágenes satelitales no
-dependen de ese paquete: los dos scripts de Earth Engine incluidos aquí
-—[`00_exportar_TRC.js`](01_SAFER_TRES_CRUCES_UY/GEE/00_exportar_TRC.js) y
+**Las imágenes se generan solas.** Los dos scripts de Earth Engine incluidos
+aquí —[`00_exportar_TRC.js`](01_SAFER_TRES_CRUCES_UY/GEE/00_exportar_TRC.js) y
 [`01_descargar_Casablanca_L89_S2.js`](02_SAFER_CASABLANCA_CL/GEE/01_descargar_Casablanca_L89_S2.js)—
-las regeneran desde las colecciones públicas.
+traen el área de estudio ya configurada: se pegan en el editor de código, se
+pulsa Run y las imágenes se exportan al Drive de cada estudiante. No hace falta
+subir assets ni partir de datos previos.
 
-> 💡 Los scripts de R esperan la estructura de carpetas de esos paquetes
+Las series de estaciones se descargan de las redes INIA, Agromet y ChileFlux.
+Las capas auxiliares preparadas para los talleres se **solicitan al docente**.
+
+> 💡 Los scripts de R esperan una estructura de carpetas determinada
 > (`01_DATOS/`, `03_SALIDAS/`, un archivo `.Rproj` en la raíz). Al ejecutarlos
 > desde una copia de este repositorio, ajuste las rutas o reconstruya esa
 > estructura.

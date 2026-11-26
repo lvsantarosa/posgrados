@@ -38,7 +38,7 @@ comparar la sensibilidad del modelo.
 
 | Archivo | Contenido |
 |:--|:--|
-| [`GEE/00_exportar_TRC.js`](GEE/00_exportar_TRC.js) | Se pega en el editor de código de Earth Engine. Exporta a Drive las cuatro escenas estacionales Landsat 8/9 (TOA) con las nueve bandas que el taller espera. |
+| [`GEE/00_exportar_TRC.js`](GEE/00_exportar_TRC.js) | Se pega en el editor de código de Earth Engine. Exporta a Drive las cuatro escenas estacionales Landsat 8/9 (TOA) con las nueve bandas que el taller espera. **Trae el límite de la cuenca incluido**: no requiere subir ningún asset. |
 | [`01_SAFER_DIDACTICO.R`](01_SAFER_DIDACTICO.R) | Script único, dividido en 10 secciones numeradas, pensado para ejecutarse **por bloques** en RStudio |
 | [`DICCIONARIO_DE_DATOS.md`](DICCIONARIO_DE_DATOS.md) | Capas, campos, unidades y clases de cada insumo |
 
@@ -50,9 +50,10 @@ comparar la sensibilidad del modelo.
 
 ## ▶️ Cómo trabajar
 
-1. Ejecute `GEE/00_exportar_TRC.js` para generar las cuatro escenas, y obtenga
-   el resto de los insumos desde sus fuentes oficiales — véase
-   [`../DATOS/FUENTES.md`](../DATOS/FUENTES.md) — o solicite el paquete de la clase.
+1. Pegue `GEE/00_exportar_TRC.js` en [Earth Engine](https://code.earthengine.google.com/),
+   pulse Run y ejecute las cuatro tareas: las escenas se exportan a su Drive.
+   Obtenga el resto de los insumos desde sus fuentes oficiales — véase
+   [`../DATOS/FUENTES.md`](../DATOS/FUENTES.md) — o solicítelos al docente.
 2. Reconstruya la estructura que el script espera:
 
 ```

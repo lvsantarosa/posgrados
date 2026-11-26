@@ -12,7 +12,8 @@ Laboratorio de Recursos Hídricos y Geotecnologías
 ## 📖 Sobre la asignatura
 
 El curso recorre la cadena completa que va de la **energía registrada por el
-sensor** hasta una estimación de **evapotranspiración actual (ETa)** y su
+sensor** partiendo por el analisis fenologico y de otros procesos relacionados
+hasta una estimación de **evapotranspiración actual (ETa)** y su
 comparación con mediciones de campo. El hilo conductor es el algoritmo
 **SAFER** (*Simple Algorithm For Evapotranspiration Retrieving*), aplicado a dos
 casos de estudio reales, y su extensión hacia variables atmosféricas de

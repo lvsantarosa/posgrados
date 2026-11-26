@@ -11,12 +11,12 @@ Laboratorio de Recursos Hídricos y Geotecnologías
 
 ## 📖 Sobre la asignatura
 
-El curso recorre la cadena completa que va de la **energía registrada por el
-sensor** partiendo por el analisis fenologico y de otros procesos relacionados
-hasta una estimación de **evapotranspiración actual (ETa)** y su
-comparación con mediciones de campo. El hilo conductor es el algoritmo
-**SAFER** (*Simple Algorithm For Evapotranspiration Retrieving*), aplicado a dos
-casos de estudio reales, y su extensión hacia variables atmosféricas de
+El curso aborda el flujo completo de información que conecta la **energía registrada por el
+sensor** energía registrada por sensores remotos con la estimación de la **evapotranspiración actual (ETa)**
+A lo largo del proceso se analizan la fenología de la vegetación y otros mecanismos 
+biofísicos que condicionan la respuesta espectral y el uso del agua.  El hilo conductor
+es el algoritmo **SAFER** (*Simple Algorithm For Evapotranspiration Retrieving*), aplicado 
+a dos casos de estudio reales, y su extensión hacia variables atmosféricas de
 reanálisis.
 
 Las prácticas combinan **Google Earth Engine** (JavaScript y Python) con **R**

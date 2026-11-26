@@ -1,6 +1,7 @@
 <div align="center">
 
-# 🌎💧 Material de Posgrado — SIG, Hidrología, Teledetección y Geotecnologías
+# 🌎💧 Material de Posgrado 
+## SIG, Hidrología, Teledetección y Geotecnologías
 
 **Laboratorio de Recursos Hídricos y Geotecnologías (LRHG)**
 Facultad de Ciencias Agronómicas y de los Alimentos · Escuela de Agronomía

@@ -32,10 +32,12 @@ se pega completo en el editor de código de Earth Engine y exporta a Google Driv
 los dos GeoTIFF que el script en R espera
 (`LANDSAT89_CASABLANCA_20231204.tif` y `SENTINEL2_CASABLANCA_20231204.tif`).
 
-**Taller 01.** Las escenas Landsat del caso uruguayo fueron exportadas
-previamente desde las colecciones TOA indicadas arriba; el repositorio no
-incluye su script de exportación. La composición de bandas de cada GeoTIFF está
-descrita en [`01_SAFER_TRES_CRUCES_UY/DICCIONARIO_DE_DATOS.md`](../01_SAFER_TRES_CRUCES_UY/DICCIONARIO_DE_DATOS.md).
+**Cómo generar los insumos del Taller 01.** Las cuatro escenas estacionales
+pesan unos 107 MB cada una, de modo que no se distribuyen: se regeneran con
+[`01_SAFER_TRES_CRUCES_UY/GEE/00_exportar_TRC.js`](../01_SAFER_TRES_CRUCES_UY/GEE/00_exportar_TRC.js),
+que las exporta a su propio Google Drive desde las colecciones TOA. La
+composición de bandas de cada GeoTIFF está descrita en
+[`01_SAFER_TRES_CRUCES_UY/DICCIONARIO_DE_DATOS.md`](../01_SAFER_TRES_CRUCES_UY/DICCIONARIO_DE_DATOS.md).
 
 Requisitos: cuenta habilitada en [Earth Engine](https://earthengine.google.com/signup/)
 y un proyecto de Google Cloud asociado (`PROJECT_ID` en los notebooks).
@@ -79,13 +81,17 @@ encabezado de los scripts correspondientes.
 
 ---
 
-## 📦 Paquete completo del curso
+## 📦 Paquete de datos del curso
 
-Los paquetes de trabajo distribuidos en clase —con los datos ya preparados, las
-guías en Word y los archivos de proyecto de RStudio— están en la carpeta del
-curso en Google Drive:
+Para quienes cursan la asignatura existe un paquete con los datos ya preparados
+y organizados por taller, que **se solicita al docente**. No es de distribución
+abierta: varios de esos conjuntos pertenecen a redes de medición que establecen
+sus propias condiciones de acceso.
 
-👉 <https://drive.google.com/drive/folders/1KYsc5lsaDsivkV-Gb2l1XwnoYKoLapIa>
+Ese paquete tampoco incluye las cuatro escenas Landsat del Taller 01 (427 MB en
+total): se regeneran con el script de exportación indicado más arriba.
 
-Los datos incluidos en esos paquetes se distribuyen **solo para uso docente**.
-Para cualquier otro uso, diríjase a la fuente original listada en esta página.
+Quien no curse la asignatura puede reconstruir todos los insumos a partir de
+las fuentes listadas en esta página: las imágenes con los dos scripts de Earth
+Engine incluidos en el repositorio, y las series de estaciones desde los
+portales de INIA, Agromet y ChileFlux.

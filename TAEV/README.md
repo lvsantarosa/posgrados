@@ -49,9 +49,12 @@ instituciones que los producen y **no se redistribuyen aquí**.
 Cada insumo, con su fuente oficial y su vía de acceso, está documentado en
 **[`DATOS/FUENTES.md`](DATOS/FUENTES.md)**.
 
-Los paquetes de trabajo completos usados en clase —con los datos ya preparados,
-las guías en Word y los archivos `.Rproj`— se distribuyen por
-[Google Drive](https://drive.google.com/drive/folders/1KYsc5lsaDsivkV-Gb2l1XwnoYKoLapIa).
+Quienes cursan la asignatura pueden **solicitar al docente** el paquete con los
+datos ya preparados y organizados por taller. Las imágenes satelitales no
+dependen de ese paquete: los dos scripts de Earth Engine incluidos aquí
+—[`00_exportar_TRC.js`](01_SAFER_TRES_CRUCES_UY/GEE/00_exportar_TRC.js) y
+[`01_descargar_Casablanca_L89_S2.js`](02_SAFER_CASABLANCA_CL/GEE/01_descargar_Casablanca_L89_S2.js)—
+las regeneran desde las colecciones públicas.
 
 > 💡 Los scripts de R esperan la estructura de carpetas de esos paquetes
 > (`01_DATOS/`, `03_SALIDAS/`, un archivo `.Rproj` en la raíz). Al ejecutarlos
